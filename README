@@ -1,0 +1,33 @@
+pamix: Pulseaudio Stereo Mixer
+==============================
+
+Creates a virtual microphone that mixes the physical microphone with sounds
+from an application. The system sounds are merged into the virtual microphone
+that can be used to record a mix of your voice and the application's audio with 
+Audacity, a video messenger, et cetera.
+
+Load the sink with 
+
+    ./load-sinks.sh
+
+The volumes of the two relevant sources -- the physical microphone and the
+loopback interface -- should be available in Pulseaudio Volume Control
+(pavucontrol) after the sinks have been loaded. To mix an application's
+audio into the virtual microphone, go to the Playback tab in pavucontrol and
+choose "Simultaneous output for Mix-for-Virtual-Microphone,...". You can now
+listen to the application's output whilst also recording it with the virtual
+microphone.
+
+If a recording application does not immediately pick up on the new virtual
+microphone, start it, then head to the "Recording" tab in pavucontrol. It
+should be possible to force the recording application to listen to the virtual
+microphone instead of what it defaulted to.
+
+To unload the virtual microphone, run
+
+    ./unload-sinks.sh
+
+WARNING: this is NOT a professional quality mixing solution, suitable for live
+music etc.  In particular, there are some problems with latency that I haven't
+figured out. The purpose is to be a (very) lightweight shell script that
+suffices for sharing music and game audio over live streams and chat.

@@ -31,3 +31,5 @@ WARNING: this is NOT a professional quality mixing solution, suitable for live
 music etc.  In particular, there are some problems with latency that I haven't
 figured out. The purpose is to be a (very) lightweight shell script that
 suffices for sharing music and game audio over live streams and chat.
+
+With credit to saraedum from StackExchange (https://unix.stackexchange.com/questions/576785/)

@@ -1,5 +1,5 @@
-pamix: Pulseaudio Stereo Mixer
-==============================
+pasmix: Pulseaudio Stereo Mixer
+===============================
 
 Creates a virtual microphone that mixes the physical microphone with sounds
 from an application. The system sounds are merged into the virtual microphone
